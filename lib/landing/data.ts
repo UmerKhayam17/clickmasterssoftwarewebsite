@@ -1,28 +1,40 @@
 import type { LucideIcon } from "lucide-react";
-import {
-  Cloud,
-  Code2,
-  Database,
-  Layers,
-  Mail,
-  Share2,
-} from "lucide-react";
+import { Mail, Share2 } from "lucide-react";
 
+import { siteBrand } from "@/lib/landing/brand";
 import { contactPath } from "@/lib/landing/constants";
 
 export const navLinks = [
-  { label: "Solutions", href: "/solutions" },
   { label: "About", href: "/about" },
+  { label: "Work", href: "#projects" },
   { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faqs" },
   { label: "Contact", href: contactPath },
 ] as const;
 
+export const navCtaLabel = "Get a Free Quote";
+
 export const contactInfo = {
-  email: "umerkhayam1717@gmail.com",
-  responseTime: "Within one business day",
-  hours: "Monday – Friday, 9:00 – 18:00",
-  location: "Remote-first · Worldwide",
+  email: siteBrand.email,
+  responseTime: "Within 24 hours",
+  hours: "Monday – Friday, 9:00 – 18:00 (PKT)",
+  location: siteBrand.location,
+} as const;
+
+export const homeHero = {
+  eyebrow: "Software Development Company in Islamabad, Pakistan",
+  headlineBefore: "We build software at the",
+  headlineEmphasis: "edge of results",
+  subtext:
+    "Next Software Development is a full-service software company based in Islamabad, Pakistan. We design and build custom software, web applications, mobile apps, CRM systems and ERP platforms — for startups, growing businesses and enterprises across Pakistan and globally.",
+  primaryCta: "Start Your Project",
+  secondaryCta: "See Our Work",
+  secondaryHref: "#projects",
+} as const;
+
+export const clientsSection = {
+  label: "Trusted by businesses across Pakistan, UK & UAE",
+  fallbackText:
+    "Worked with companies in retail, healthcare, logistics, finance and education.",
 } as const;
 
 export type ContactSelectOption = {
@@ -114,49 +126,57 @@ export const processSteps = [
   {
     step: "1",
     title: "Discover",
-    description: "Goals, users, and constraints—mapped before we write code.",
+    description:
+      "We start every engagement with deep listening. We learn your business, your users, your constraints and your goals — and produce a specification document that everyone agrees on before anything is built.",
   },
   {
     step: "2",
-    title: "Design",
-    description: "Architecture and interfaces aligned with your timeline.",
+    title: "Define",
+    description:
+      "Architecture, technology choices, project milestones, timelines and fixed pricing are all confirmed in writing before development starts. No scope creep. No surprises.",
   },
   {
     step: "3",
     title: "Build",
-    description: "Weekly demos, transparent progress, room to refine.",
+    description:
+      "Our in-house team in Islamabad builds in 2-week agile sprints. You receive a working, testable build every fortnight. Progress is always visible and feedback is always welcome.",
   },
   {
     step: "4",
     title: "Launch",
-    description: "Deploy, handoff, and partnership beyond go-live.",
+    description:
+      "We deploy, configure monitoring, run final QA across all environments and hand over full documentation. Then we stick around — with a 30-day warranty and optional ongoing support.",
   },
 ];
 
 export const stats = [
-  { value: "120+", label: "Projects shipped" },
-  { value: "98%", label: "Client retention" },
-  { value: "9yr+", label: "Avg. experience" },
-  { value: "24", label: "Team members" },
+  { value: "120+", label: "Projects delivered" },
+  { value: "98%", label: "Client satisfaction" },
+  { value: "99.7%", label: "On-time delivery" },
+  { value: "24", label: "In-house experts" },
 ];
 
 export const aboutSection = {
+  teamLink: "/about#team",
+  teamCta: "Meet our team",
   paragraphs: [
-    "Nexus is a boutique software studio founded on a simple belief: great products should feel as clear as the horizon—open, calm, and forward-looking.",
-    "We partner with founders and product teams who need senior talent without the overhead of a large agency. From first prototype to production scale, we stay close to the work and accountable to outcomes.",
+    "Next Software Development is not a one-project agency. We are a dedicated software company based in Islamabad that builds long-term technology partnerships. Our clients come back to us — not just for one app or one website, but as their permanent technology team. We are fast, honest and obsessively focused on quality. We take full ownership of every project from the first line of code to the last deployment, and we are still here when you need us six months after launch.",
   ],
   values: [
     {
-      title: "Clarity first",
-      description: "We reduce noise in requirements, architecture, and interfaces so teams can move with confidence.",
+      title: "Client First",
+      description:
+        "Every decision we make is measured against one question: does this serve the client's goal? Your success is our only metric. We do not cut corners, recommend unnecessary features or inflate timelines.",
     },
     {
-      title: "Craft & care",
-      description: "Quality is a habit—code reviews, design systems, and documentation are part of every engagement.",
+      title: "Craft in Use",
+      description:
+        "Beautiful software is software that works. We obsess over the details — performance, usability, reliability — because the best technology is the kind your users never have to think about.",
     },
     {
-      title: "True partnership",
-      description: "We embed with your team, share context openly, and build software you can own long after we ship.",
+      title: "Your Ownership",
+      description:
+        "You own everything we build. Every line of code, every design file, every database. We sign NDAs, transfer full intellectual property rights and never hold your project hostage.",
     },
   ],
   image: {
@@ -172,6 +192,54 @@ export type Technology = {
   color: string;
 };
 
+export type TechStackTab = {
+  id: string;
+  label: string;
+  items: string[];
+};
+
+export const techStackIntro =
+  "Proven technologies chosen for performance, scalability and long-term maintainability — not trend-chasing.";
+
+export const techStackTabs: TechStackTab[] = [
+  {
+    id: "frontend",
+    label: "Frontend",
+    items: ["Next.js", "React.js", "Vue.js", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    id: "backend",
+    label: "Backend",
+    items: ["Node.js", "Python", "Laravel", "Django", ".NET"],
+  },
+  {
+    id: "mobile",
+    label: "Mobile",
+    items: ["React Native", "Flutter", "Swift", "Kotlin"],
+  },
+  {
+    id: "database",
+    label: "Database",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase"],
+  },
+  {
+    id: "cloud",
+    label: "Cloud",
+    items: ["AWS", "Google Cloud", "Azure", "DigitalOcean", "Vercel"],
+  },
+  {
+    id: "devops",
+    label: "DevOps",
+    items: ["Docker", "Kubernetes", "GitHub Actions", "Terraform", "Linux"],
+  },
+  {
+    id: "ai",
+    label: "AI & ML",
+    items: ["OpenAI API", "LangChain", "TensorFlow", "PyTorch", "Hugging Face"],
+  },
+];
+
+/** @deprecated Used only if legacy stack UI is restored */
 export type TechStackCategory = {
   title: string;
   description: string;
@@ -180,64 +248,8 @@ export type TechStackCategory = {
   technologies: Technology[];
 };
 
-export const techStackCategories: TechStackCategory[] = [
-  {
-    title: "Frontend",
-    description: "Fast, accessible interfaces with design systems that scale.",
-    icon: Layers,
-    accent: "sky",
-    technologies: [
-      { name: "React", color: "#61DAFB" },
-      { name: "Next.js", color: "#0D1B2A" },
-      { name: "TypeScript", color: "#3178C6" },
-      { name: "Tailwind CSS", color: "#38BDF8" },
-      { name: "React Native", color: "#61DAFB" },
-    ],
-  },
-  {
-    title: "Backend",
-    description: "APIs and services with clear contracts and room to grow.",
-    icon: Code2,
-    accent: "navy",
-    technologies: [
-      { name: "Node.js", color: "#339933" },
-      { name: "Python", color: "#3776AB" },
-      { name: "PostgreSQL", color: "#4169E1" },
-      { name: "Redis", color: "#DC382D" },
-      { name: "GraphQL", color: "#E10098" },
-    ],
-  },
-  {
-    title: "Cloud & DevOps",
-    description: "Infrastructure as code, observability, and reliable delivery.",
-    icon: Cloud,
-    accent: "peach",
-    technologies: [
-      { name: "AWS", color: "#FF9900" },
-      { name: "Docker", color: "#2496ED" },
-      { name: "Kubernetes", color: "#326CE5" },
-      { name: "Terraform", color: "#844FBA" },
-      { name: "GitHub Actions", color: "#2088FF" },
-    ],
-  },
-  {
-    title: "Data & AI",
-    description: "Pipelines, analytics, and ML where they add real value.",
-    icon: Database,
-    accent: "cream",
-    technologies: [
-      { name: "dbt", color: "#FF694B" },
-      { name: "Snowflake", color: "#29B5E8" },
-      { name: "OpenAI", color: "#412991" },
-      { name: "LangChain", color: "#1C3C3C" },
-      { name: "BigQuery", color: "#669DF6" },
-    ],
-  },
-];
-
-export const allTechnologies = techStackCategories.flatMap((category) =>
-  category.technologies.map((tech) => ({ ...tech, category: category.title }))
-);
+export const techStackCategories: TechStackCategory[] = [];
+export const allTechnologies: (Technology & { category: string })[] = [];
 
 export type Client = {
   slug: string;
@@ -258,108 +270,125 @@ export const clients: Client[] = [
 
 export const projects = [
   {
-    slug: "meridian-bank",
-    title: "Meridian Bank",
-    category: "Fintech · Platform",
+    slug: "lahore-crm",
+    title: "Lahore Sales CRM",
+    category: "CRM Development · Pakistan",
+    description:
+      "A fully custom CRM built for a Lahore-based sales team — replacing three disconnected tools with one unified platform.",
     image: {
       src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=75",
-      alt: "Financial analytics dashboard on screen",
+      alt: "CRM dashboard for sales team",
       width: 1200,
       height: 750,
     },
   },
   {
-    slug: "northline-health",
-    title: "Northline Health",
-    category: "Healthcare · Portal",
+    slug: "uae-healthcare",
+    title: "UAE Clinic Platform",
+    category: "Healthcare Software · UAE",
+    description:
+      "A patient management and appointment booking system serving three clinics across the UAE, built on Next.js and Node.js.",
     image: {
       src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=75",
-      alt: "Clinician using a tablet in a healthcare setting",
+      alt: "Healthcare appointment software",
       width: 1200,
       height: 750,
     },
   },
   {
-    slug: "cargo-pulse",
-    title: "CargoPulse",
-    category: "Logistics · Mobile",
+    slug: "pk-marketplace",
+    title: "Pakistan Marketplace",
+    category: "E-Commerce · Pakistan",
+    description:
+      "A multi-vendor marketplace with JazzCash and Easypaisa integration — handling over 500 daily transactions within three weeks of launch.",
     image: {
       src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=75",
-      alt: "Warehouse logistics and shipping operations",
+      alt: "E-commerce marketplace interface",
       width: 1200,
       height: 750,
     },
   },
   {
-    slug: "ledgerly",
-    title: "Ledgerly",
-    category: "SaaS · Dashboard",
+    slug: "islamabad-erp",
+    title: "Islamabad Manufacturing ERP",
+    category: "ERP Development · Pakistan",
+    description:
+      "A custom ERP replacing five spreadsheets for an Islamabad-based manufacturer — cutting monthly reporting time from two days to two hours.",
     image: {
       src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=75",
-      alt: "Team collaborating around a SaaS product demo",
+      alt: "ERP analytics and reporting",
       width: 1200,
       height: 750,
     },
   },
 ];
 
+export const teamIntro =
+  "We are a tight-knit team of engineers, designers and strategists based in Islamabad, Pakistan. Small enough to care about every project. Experienced enough to handle anything from a startup MVP to an enterprise ERP. Every person on this team has been chosen for craft, communication and character.";
+
 export const teamMembers = [
   {
-    name: "Sarah Chen",
-    role: "Founding Engineer",
+    name: "Usman Tariq",
+    role: "Lead Engineer",
+    bio: "Full-stack engineer with 7 years building production systems in Node.js and React.",
     image: {
       src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of Sarah Chen",
+      alt: "Portrait of Usman Tariq",
       width: 600,
       height: 600,
     },
   },
   {
-    name: "Marcus Webb",
-    role: "Lead Architect",
-    image: {
-      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of Marcus Webb",
-      width: 600,
-      height: 600,
-    },
-  },
-  {
-    name: "Elena Ruiz",
-    role: "Product Design",
+    name: "Sara Malik",
+    role: "Head of Design",
+    bio: "UI/UX designer with a background in product design for SaaS companies in the UK and Pakistan.",
     image: {
       src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of Elena Ruiz",
+      alt: "Portrait of Sara Malik",
       width: 600,
       height: 600,
     },
   },
   {
-    name: "James Okonkwo",
-    role: "DevOps",
+    name: "Ali Hassan",
+    role: "Mobile Developer",
+    bio: "React Native specialist who has shipped 12 apps to the App Store and Play Store.",
     image: {
       src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of James Okonkwo",
+      alt: "Portrait of Ali Hassan",
       width: 600,
       height: 600,
     },
   },
   {
-    name: "Priya Sharma",
-    role: "Engineering",
+    name: "Zainab Raza",
+    role: "Project Manager",
+    bio: "Certified Scrum Master keeping every project on time, on budget and well-communicated.",
     image: {
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of Priya Sharma",
+      alt: "Portrait of Zainab Raza",
       width: 600,
       height: 600,
     },
   },
   {
-    name: "Alex Morgan",
-    role: "Delivery",
+    name: "Hamza Khan",
+    role: "Backend Engineer",
+    bio: "Python and Laravel expert with deep experience in ERP and CRM system architecture.",
+    image: {
+      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=75",
+      alt: "Portrait of Hamza Khan",
+      width: 600,
+      height: 600,
+    },
+  },
+  {
+    name: "Aisha Noor",
+    role: "QA Lead",
+    bio: "Manual and automated testing specialist who finds every bug before your users do.",
     image: {
       src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=75",
-      alt: "Portrait of Alex Morgan",
+      alt: "Portrait of Aisha Noor",
       width: 600,
       height: 600,
     },
@@ -369,23 +398,23 @@ export const teamMembers = [
 export const testimonials = [
   {
     quote:
-      "They delivered our MVP in eleven weeks with zero drama. Weekly demos kept everyone aligned and we shipped on schedule.",
-    author: "Sarah Chen",
-    role: "CTO, Ledgerly",
+      "We came to Next Software Development with a rough idea for a CRM and left with a product our entire sales team uses every single day. They were honest about what was possible, fast in delivery and thorough in testing. Exactly the software company we needed.",
+    author: "Saqib Shah",
+    role: "CEO, Retail Group · Lahore, Pakistan",
     image: {
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=96&q=75",
-      alt: "Sarah Chen",
+      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&q=75",
+      alt: "Saqib Shah",
       width: 200,
       height: 200,
     },
   },
   {
     quote:
-      "The team rebuilt our legacy stack without downtime. Communication was clear, documentation excellent, outcomes measurable.",
+      "As someone who has worked with software agencies in London, Dubai and Karachi — Next Software Development is right up there with the best. Their Islamabad team communicates brilliantly, ships on time and the code quality is excellent.",
     author: "Marcus Webb",
-    role: "VP Engineering, Northline",
+    role: "CTO, SaaS Startup · London, UK",
     image: {
-      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&q=75",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&q=75",
       alt: "Marcus Webb",
       width: 200,
       height: 200,
@@ -393,12 +422,12 @@ export const testimonials = [
   },
   {
     quote:
-      "Best studio experience we've had—senior talent on every call and a product our users genuinely love using.",
-    author: "Elena Ruiz",
-    role: "Product Director, CargoPulse",
+      "Our e-commerce platform was a mess before Next Software Development rebuilt it. Within six weeks we had a fast, clean store with proper JazzCash integration. Our conversion rate doubled. I refer them to every business owner I know in Pakistan.",
+    author: "Zara Khan",
+    role: "Founder, Fashion Brand · Karachi, Pakistan",
     image: {
       src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=96&q=75",
-      alt: "Elena Ruiz",
+      alt: "Zara Khan",
       width: 200,
       height: 200,
     },
@@ -418,63 +447,45 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "drawing-the-horizon",
-    title: "Drawing the horizon: planning products that last",
-    excerpt: "How we align roadmaps with the lightest path to value.",
+    slug: "choose-software-development-company-pakistan",
+    title: "How to Choose the Right Software Development Company in Pakistan",
+    excerpt:
+      "There are hundreds of agencies offering software development services across Pakistan. Here is the honest framework we recommend for evaluating any software company — including us.",
     date: "May 12, 2026",
-    readTime: "6 min",
-    category: "Studio",
+    readTime: "8 min",
+    category: "Software Development",
     image: {
       src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=640&q=75",
-      alt: "Team planning session at a whiteboard",
+      alt: "Team planning software project",
       width: 800,
       height: 500,
     },
     body: [
-      "The best roadmaps are not the longest—they are the clearest. We start every engagement by separating must-haves from nice-to-haves, then sequencing work so stakeholders see value early without mortgaging the architecture.",
-      "That means defining thin vertical slices: a user can complete a meaningful action end-to-end, even if the polish comes later. It also means writing down assumptions and revisiting them after each demo, not after each quarter.",
-      "When teams skip this discipline, they accumulate parallel initiatives that compete for the same engineers and design attention. The horizon drifts. Our job is to keep it visible—what we are building now, what we are deferring, and why.",
-      "Products that last are planned in layers: a stable core, extension points for integrations, and UX that can grow without redesigning from scratch every year. That is the horizon we draw with partners.",
+      "Choosing a software development company in Pakistan is not about picking the lowest quote or the flashiest portfolio. It is about finding a partner who will still answer the phone six months after launch.",
+      "Start with delivery proof: case studies with measurable outcomes, references you can call, and code you can inspect if you have a technical advisor. Ask how they handle scope changes, who owns the IP, and what happens when timelines slip.",
+      "Look for a team that writes specifications before coding, demos working software every two weeks, and documents handoff. A good software company in Islamabad should overlap with your timezone if you are in the UK or UAE — and communicate in plain language.",
+      "Finally, run a small paid discovery phase before committing to a six-figure build. The best firms will encourage that. It protects both sides and surfaces fit early.",
     ],
   },
   {
-    slug: "calm-interfaces",
-    title: "Calm interfaces for complex workflows",
-    excerpt: "Design patterns we use when the domain is anything but simple.",
+    slug: "discovery-structure-prevents-problems",
+    title: "A little structure now prevents a lot of problems later",
+    excerpt:
+      "The most expensive software projects we have ever seen were not the complex ones. They were simple projects that skipped discovery. Here is what a proper discovery phase actually looks like.",
     date: "Apr 28, 2026",
-    readTime: "8 min",
-    category: "Design",
+    readTime: "6 min",
+    category: "Product Strategy",
     image: {
       src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=640&q=75",
-      alt: "UI design sketches and interface components",
+      alt: "Product discovery workshop",
       width: 800,
       height: 500,
     },
     body: [
-      "Complex domains—healthcare, logistics, finance—do not become simple because we wish them so. The interface can still feel calm if information hierarchy, progressive disclosure, and consistent patterns do the heavy lifting.",
-      "We favor fewer primary actions per screen, clear status for async work, and language that matches how practitioners talk—not how databases are shaped. Empty states and error messages get the same attention as happy paths.",
-      "Design systems help, but only when tokens and components map to real product concepts. Otherwise teams bolt on one-off screens and the calm erodes. We document decisions alongside Figma files so engineering and design stay aligned.",
-      "Accessibility is part of calm, not an audit at the end. Keyboard flows, contrast, and screen reader labels are designed in from the first prototype, especially when compliance is non-negotiable.",
-    ],
-  },
-  {
-    slug: "shipping-weekly",
-    title: "Shipping weekly without burning out",
-    excerpt: "Trunk-based development and demos that actually help.",
-    date: "Apr 3, 2026",
-    readTime: "5 min",
-    category: "Engineering",
-    image: {
-      src: "https://images.unsplash.com/photo-1517694712202-14dd9530aa2f?auto=format&fit=crop&w=640&q=75",
-      alt: "Developer laptop showing code in an IDE",
-      width: 800,
-      height: 500,
-    },
-    body: [
-      "Weekly shipping is a rhythm, not a heroics contest. Trunk-based development, small pull requests, and automated checks keep main green so merges are boring—in a good way.",
-      "Demos should show working software, not slide decks. We timebox prep, focus on user-visible changes, and capture decisions in writing right after the call. That reduces rework and midnight pings.",
-      "Sustainable pace also means protecting focus: reasonable WIP limits, clear ownership, and saying no to scope that does not serve the current milestone. Burnout is a process smell, not a badge of honor.",
-      "When the rhythm works, stakeholders trust the team, engineers trust the plan, and launches feel like the next step—not a miracle.",
+      "Discovery is not a sales exercise. It is a short, structured phase where we map users, workflows, integrations, risks and success metrics — then agree on a fixed scope and price before build.",
+      "A proper discovery deliverable includes user stories, a technical architecture sketch, milestone plan, and explicit out-of-scope list. Stakeholders sign off so there is one shared truth.",
+      "Skipping discovery feels faster until rework piles up: wrong database choices, missing compliance requirements, or features nobody actually uses. That is when budgets blow past PKR estimates and trust erodes.",
+      "Whether you work with Next Software Development or another firm, invest in discovery. It is the cheapest insurance on any custom software project.",
     ],
   },
 ];
@@ -483,87 +494,130 @@ export type FaqItem = {
   question: string;
   answer: string;
   tag: string;
+  column: "left" | "right";
 };
+
+export const faqIntro =
+  "Everything you need to know before starting a project with us. Still have questions? We're happy to walk you through everything on a free call.";
 
 export const faqs: FaqItem[] = [
   {
-    tag: "Getting started",
-    question: "What kinds of projects do you take on?",
-    answer:
-      "We partner on greenfield products, platform rebuilds, and focused feature work—typically web, mobile, and cloud-backed systems. If you need a senior team that can own design through deployment, we're a good fit.",
-  },
-  {
-    tag: "Timeline",
-    question: "How long does a typical engagement last?",
-    answer:
-      "Discovery sprints run two to three weeks. MVPs often ship in eight to fourteen weeks depending on scope. Many clients stay on for ongoing product development after launch.",
-  },
-  {
-    tag: "Collaboration",
-    question: "Do you work with our existing team?",
-    answer:
-      "Yes. We embed alongside your engineers and designers, join your rituals, and document decisions so knowledge stays in-house. We can also lead delivery end-to-end when you need extra capacity.",
-  },
-  {
+    column: "left",
     tag: "Pricing",
-    question: "How do you price projects?",
+    question: "How much does custom software development cost in Pakistan?",
     answer:
-      "We offer fixed-scope phases after discovery, monthly retainers for ongoing work, and time-boxed sprints for exploratory efforts. You'll get a clear proposal with milestones before we start building.",
+      "Every project is different, so we price after a free discovery call — not before. That said, a web application or mobile app typically starts from PKR 300,000. A full CRM or ERP system ranges from PKR 800,000 to PKR 3,000,000 depending on complexity. We always provide a fixed price before work begins.",
   },
   {
+    column: "left",
+    tag: "Timeline",
+    question: "How long does a software project take?",
+    answer:
+      "A simple web app or MVP takes 4 to 8 weeks. A mobile app takes 8 to 14 weeks. A CRM, ERP or large platform takes 3 to 6 months. We give you a committed timeline in writing before any work starts.",
+  },
+  {
+    column: "left",
+    tag: "Global",
+    question: "Do you build software for clients outside Pakistan?",
+    answer:
+      "Yes. We regularly work with clients in the UK, UAE, USA, Canada and Europe. Our Islamabad team overlaps naturally with UK and UAE business hours and we accept payment in PKR, USD, GBP and AED.",
+  },
+  {
+    column: "left",
+    tag: "Getting started",
+    question: "What if I just have an idea and no technical background?",
+    answer:
+      "That is exactly the kind of client we work best with. We handle everything — translating your idea into a specification, choosing the right technology and guiding you through every decision. You do not need to be technical at all.",
+  },
+  {
+    column: "right",
+    tag: "Legal",
+    question: "Do you sign NDAs before project discussions?",
+    answer:
+      "Yes, always. We sign a Non-Disclosure Agreement before any detailed project conversation. Your idea, your data and your code are completely confidential. Full intellectual property rights transfer to you on project completion.",
+  },
+  {
+    column: "right",
     tag: "Process",
-    question: "What does your process look like week to week?",
+    question: "How do you communicate during a project?",
     answer:
-      "You'll see working software every week—demos, written updates, and a shared backlog. We favor short feedback loops, trunk-based development, and designs validated against real technical constraints.",
+      "You get a dedicated project manager, a shared project board (Jira or Notion), weekly written progress updates and access to your builds for review every two weeks. You are never left in the dark.",
   },
   {
-    tag: "Technology",
-    question: "Can you work with our tech stack?",
-    answer:
-      "We specialize in modern JavaScript and cloud-native stacks (React, Next.js, Node, Python, AWS, and common data tools) and adapt to what you already run when it makes sense for the product.",
-  },
-  {
+    column: "right",
     tag: "Support",
-    question: "What happens after launch?",
+    question: "Do you provide support after launch?",
     answer:
-      "We hand off runbooks, monitoring, and documentation, and can stay on for maintenance, performance work, or the next roadmap phase. Our goal is software your team can own confidently.",
+      "Every project includes a 30-day bug-fix warranty at no cost. After that, we offer monthly maintenance packages covering security updates, performance monitoring and new feature development.",
+  },
+  {
+    column: "right",
+    tag: "Why us",
+    question: "What makes you different from other software companies in Pakistan?",
+    answer:
+      "Three things: we write clean, documented, handover-ready code — you are never locked in. We communicate in plain English with no technical jargon. And we have never missed a committed launch date.",
   },
 ];
 
+export const homeContact = {
+  overline: "Start here",
+  titleBefore: "Let's build your",
+  titleEmphasis: "next big thing",
+  subtext:
+    "Tell us about your project. We will get back to you within 24 hours with a clear path forward — no obligation, no sales pressure.",
+  emailPlaceholder: "Your email address",
+  cta: "Get Started",
+  reassurance: "Free consultation · No commitment · Based in Islamabad, Pakistan",
+} as const;
+
+export const footerBrand = {
+  description:
+    "A software development company in Islamabad, Pakistan. Building software that lasts.",
+  copyright: "© 2025 Next Software Development. All rights reserved.",
+} as const;
+
 export const footerColumns = [
-  {
-    title: "Studio",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Solutions", href: "/solutions" },
-      { label: "Work", href: "#projects" },
-      { label: "Blog", href: "/blog" },
-      { label: "FAQ", href: "/faqs" },
-      { label: "Contact", href: contactPath },
-    ],
-  },
   {
     title: "Services",
     links: [
-      { label: "Engineering", href: "/software-development" },
-      { label: "Design", href: "/design-ux" },
-      { label: "Cloud", href: "/cloud-devops" },
-      { label: "Security", href: "/data-security" },
+      { label: "Software Development", href: "/software-development" },
+      { label: "Web Development", href: "/software-development/web-development" },
+      { label: "Mobile Development", href: "/software-development/mobile-app-development" },
+      { label: "UI/UX Design", href: "/design-ux" },
+      { label: "E-Commerce Development", href: "/solutions/ecommerce" },
+      { label: "AI & Automation", href: "/solutions/ai-agent" },
+      { label: "Cloud & DevOps", href: "/cloud-devops" },
+      { label: "QA & Testing", href: "/software-development" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Our Work", href: "#projects" },
+      { label: "Blog", href: "/blog" },
+      { label: "Careers", href: contactPath },
+      { label: "Contact", href: contactPath },
     ],
   },
   {
     title: "Connect",
     links: [
-      { label: "Blog", href: "/blog" },
       { label: "LinkedIn", href: "https://linkedin.com" },
       { label: "GitHub", href: "https://github.com" },
-      { label: "Email", href: "mailto:umerkhayam1717@gmail.com" },
+      { label: "Twitter / X", href: "https://twitter.com" },
+      { label: "Clutch", href: "https://clutch.co" },
     ],
   },
 ];
 
+export const footerLegal = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+] as const;
+
 export const socialLinks: { label: string; href: string; icon: LucideIcon }[] = [
   { label: "LinkedIn", href: "https://linkedin.com", icon: Share2 },
-  { label: "GitHub", href: "https://github.com", icon: Code2 },
-  { label: "Email", href: "mailto:umerkhayam1717@gmail.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com", icon: Share2 },
+  { label: "Email", href: `mailto:${siteBrand.email}`, icon: Mail },
 ];

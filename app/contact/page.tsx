@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 import { ContactPage } from "@/components/pages/contact-page";
+import { siteBrand, siteMetadata } from "@/lib/landing/brand";
 import { parseContactSearchParams } from "@/lib/landing/contact-form-state";
 
 export const metadata: Metadata = {
-  title: "Contact | Nexus Software",
-  description:
-    "Get in touch with Nexus Software. We reply within one business day about your product or project.",
+  title: `Contact | ${siteBrand.name}`,
+  description: `Contact ${siteBrand.name} in ${siteBrand.location}. ${siteMetadata.description}`,
 };
 
 export default async function ContactRoute({

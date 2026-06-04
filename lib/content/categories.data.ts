@@ -18,7 +18,9 @@ export const mainCategories: MainCategoryContent[] = [
     slug: "software-development",
     icon: Code2,
     label: "Software Development",
-    tagline: "Products engineered for clarity, scale, and the long horizon.",
+    exploreCta: "Explore software development",
+    tagline:
+      "Custom software that fits your business exactly — CRM systems, ERP platforms, SaaS products, HRM tools, POS software and enterprise applications built from the ground up for companies in Pakistan and beyond.",
     description:
       "We partner with teams to design and build custom software—from greenfield platforms to modernizing legacy systems. Our engineers embed with yours, ship in tight loops, and leave codebases your team can own for years.",
     metaDescription:
@@ -111,8 +113,10 @@ export const mainCategories: MainCategoryContent[] = [
   {
     slug: "design-ux",
     icon: Palette,
-    label: "Design & UX",
-    tagline: "Calm interfaces for complex work—and systems that stay coherent as you grow.",
+    label: "Design & UI/UX",
+    exploreCta: "Explore design services",
+    tagline:
+      "Interfaces that convert and products that users love. We move from discovery and user research through wireframes to high-fidelity Figma designs — and stay involved throughout development to make sure every pixel ships as designed.",
     description:
       "Our design practice pairs research with craft. We help you understand users, define design languages, and ship interfaces that feel intentional at every breakpoint.",
     metaDescription:
@@ -190,7 +194,9 @@ export const mainCategories: MainCategoryContent[] = [
     slug: "cloud-devops",
     icon: Cloud,
     label: "Cloud & DevOps",
-    tagline: "Infrastructure and delivery pipelines that let your team ship without surprises.",
+    exploreCta: "Explore cloud services",
+    tagline:
+      "Your software is only as reliable as the infrastructure underneath it. We architect, deploy and manage cloud environments on AWS, Google Cloud and Azure — with full CI/CD automation, monitoring and zero-downtime deployments.",
     description:
       "We design cloud architecture, automate deployments, and instrument systems so you can move fast with confidence. From first deploy to multi-region scale, we focus on reliability and developer experience.",
     metaDescription:
@@ -267,8 +273,10 @@ export const mainCategories: MainCategoryContent[] = [
   {
     slug: "data-security",
     icon: Shield,
-    label: "Data & Security",
-    tagline: "Turn complex data into decisions—and protect what matters along the way.",
+    label: "Data & Analytics",
+    exploreCta: "Explore data services",
+    tagline:
+      "Turn raw business data into decisions. We build data pipelines, custom reporting dashboards, business intelligence tools and machine learning models that give Pakistani businesses the same analytical edge as global enterprises.",
     description:
       "We build analytics pipelines, dashboards stakeholders trust, and security practices that scale with your product. From first metrics to compliance readiness, we help you grow with guardrails.",
     metaDescription:

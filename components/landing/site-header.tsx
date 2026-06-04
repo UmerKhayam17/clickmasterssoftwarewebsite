@@ -17,7 +17,8 @@ const ServicesNavDropdown = dynamic(
   }
 );
 import { btnPrimary, contactPath, container } from "@/lib/landing/constants";
-import { navLinks } from "@/lib/landing/data";
+import { siteBrand } from "@/lib/landing/brand";
+import { navCtaLabel, navLinks } from "@/lib/landing/data";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
@@ -47,13 +48,13 @@ export function SiteHeader() {
           >
             <Link
               href="/"
-              className="flex min-w-0 items-center justify-self-start font-heading text-lg font-medium tracking-tight transition-opacity hover:opacity-80 sm:text-xl"
+              className="flex min-w-0 items-center justify-self-start font-heading text-sm font-medium tracking-tight transition-opacity hover:opacity-80 sm:text-base md:text-lg"
             >
-              Nexus
+              <span className="truncate">{siteBrand.name}</span>
             </Link>
 
             <nav
-              className="hidden items-center justify-center justify-self-center gap-1 lg:gap-2 md:flex"
+              className="hidden items-center justify-center justify-self-center gap-1 md:flex lg:gap-2"
               aria-label="Main"
             >
               <ServicesNavDropdown />
@@ -71,10 +72,10 @@ export function SiteHeader() {
 
             <div className="flex items-center justify-self-end gap-2">
               <Link
-                href="/solutions"
+                href={contactPath}
                 className="rounded-lg px-2 py-2 text-sm text-horizon-muted transition-colors hover:text-horizon-navy md:hidden"
               >
-                Solutions
+                Contact
               </Link>
               <Link
                 href={contactPath}
@@ -84,7 +85,7 @@ export function SiteHeader() {
                   "transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
                 )}
               >
-                Start a project
+                {navCtaLabel}
               </Link>
             </div>
           </div>

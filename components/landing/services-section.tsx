@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-
 import { CardImage } from "@/components/landing/card-image";
 import { Reveal } from "@/components/landing/reveal";
 import { SectionHeading } from "@/components/landing/section-heading";
@@ -19,10 +17,10 @@ export function ServicesSection() {
           overlineText="What we do"
           title={
             <>
-              Four <span className="italic">disciplines</span>
+              Four <span className="italic">disciplines</span>.
             </>
           }
-          description="Everything you need to go from idea to production—with one team that stays with you."
+          description="Everything you need, built to work together."
         />
       </div>
 
@@ -65,12 +63,8 @@ export function ServicesSection() {
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-horizon-muted">
                     {category.tagline}
                   </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-horizon-navy">
-                    Explore {category.label.toLowerCase()}
-                    <ArrowUpRight
-                      className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      aria-hidden
-                    />
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-horizon-navy group-hover:underline">
+                    {category.exploreCta ?? `Explore ${category.label.toLowerCase()}`} →
                   </span>
                 </div>
               </Link>

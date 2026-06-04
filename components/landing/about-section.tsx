@@ -16,7 +16,7 @@ export function AboutSection() {
           overlineText="About us"
           title={
             <>
-              A studio built for the <span className="italic">long view</span>
+              A software company built for the <span className="italic">long run</span>
             </>
           }
           className="mb-10 md:mb-12"
@@ -32,8 +32,8 @@ export function AboutSection() {
               </Reveal>
             ))}
             <Reveal delay={motionStagger * 2}>
-              <Link href="/about#team" className={btnOutline}>
-                Meet the team
+              <Link href={aboutSection.teamLink} className={btnOutline}>
+                {aboutSection.teamCta} →
               </Link>
             </Reveal>
           </div>

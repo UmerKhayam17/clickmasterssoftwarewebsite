@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 
+import { siteBrand } from "@/lib/landing/brand";
 import type { ContactFormData } from "@/lib/landing/data";
 import {
   contactBudgetRanges,
@@ -115,7 +116,7 @@ function formatHtml(data: ContactFormData): string {
 }
 
 function buildSubject(data: ContactFormData): string {
-  return `[Nexus] New inquiry from ${data.name} (${data.email})`;
+  return `[${siteBrand.shortName}] New inquiry from ${data.name} (${data.email})`;
 }
 
 async function sendViaResend(data: ContactFormData, to: string): Promise<void> {
@@ -125,7 +126,7 @@ async function sendViaResend(data: ContactFormData, to: string): Promise<void> {
   }
 
   const from =
-    process.env.RESEND_FROM?.trim() ?? "Nexus Software <onboarding@resend.dev>";
+    process.env.RESEND_FROM?.trim() ?? `${siteBrand.name} <onboarding@resend.dev>`;
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -166,7 +167,7 @@ async function sendViaSmtp(data: ContactFormData): Promise<void> {
 
   await transporter.sendMail({
     from: {
-      name: "Nexus Software Website",
+      name: siteBrand.name,
       address: config.user,
     },
     to: config.to,

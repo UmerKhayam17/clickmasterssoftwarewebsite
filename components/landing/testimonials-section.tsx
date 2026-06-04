@@ -11,10 +11,10 @@ export function TestimonialsSection() {
     <section id="testimonials" className="w-full bg-horizon-cream">
       <div className={cn(container, sectionPad)}>
         <SectionHeading
-          overlineText="Partners"
+          overlineText="Testimonials"
           title={
             <>
-              What partners <span className="italic">say</span>
+              What <span className="italic">partners</span> say
             </>
           }
           className="mb-8 md:mb-10"

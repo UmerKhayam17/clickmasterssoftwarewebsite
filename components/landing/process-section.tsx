@@ -13,7 +13,7 @@ export function ProcessSection() {
           overlineText="How we work"
           title={
             <>
-              From sketch to <span className="italic">shore</span>
+              From brief to launch — <span className="italic">and beyond</span>
             </>
           }
           className="mb-8 md:mb-10"

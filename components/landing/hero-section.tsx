@@ -2,9 +2,9 @@ import Link from "next/link";
 
 import { CardImage } from "@/components/landing/card-image";
 import { Reveal } from "@/components/landing/reveal";
-import { btnOutline, btnPrimary, card, contactPath, container, sectionPad } from "@/lib/landing/constants";
+import { btnOutline, btnPrimary, card, contactPath, container, overline, sectionPad } from "@/lib/landing/constants";
+import { heroImages, homeHero, stats } from "@/lib/landing/data";
 import { motionStagger } from "@/lib/landing/motion";
-import { heroImages, stats } from "@/lib/landing/data";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
@@ -19,32 +19,40 @@ export function HeroSection() {
         <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-8">
           <div className="min-w-0">
             <Reveal immediate delay={0}>
-              <h1 className="max-w-3xl font-heading text-4xl font-normal leading-[1.12] tracking-tight text-horizon-navy sm:text-5xl lg:text-6xl">
-                We build software at the{" "}
-                <span className="italic">edge of light</span>
-              </h1>
+              <p className={overline}>{homeHero.eyebrow}</p>
             </Reveal>
 
             <Reveal immediate delay={motionStagger}>
-              <p className="mt-4 max-w-xl text-base leading-relaxed text-horizon-muted md:text-lg">
-                A boutique studio pairing thoughtful design with rigorous engineering—for products
-                that feel as clear as the horizon.
-              </p>
+              <h1 className="mt-3 max-w-3xl font-heading text-4xl font-normal leading-[1.12] tracking-tight text-horizon-navy sm:text-5xl lg:text-6xl">
+                {homeHero.headlineBefore}{" "}
+                <span className="italic">{homeHero.headlineEmphasis}</span>
+              </h1>
             </Reveal>
 
             <Reveal immediate delay={motionStagger * 2}>
+              <p className="mt-4 max-w-xl text-base leading-relaxed text-horizon-muted md:text-lg">
+                {homeHero.subtext}
+              </p>
+            </Reveal>
+
+            <Reveal immediate delay={motionStagger * 3}>
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center">
                 <Link href={contactPath} className={btnPrimary}>
-                  Start a project
+                  {homeHero.primaryCta}
                 </Link>
-                <Link href={contactPath} className={btnOutline}>
-                  Contact us
+                <Link href={homeHero.secondaryHref} className={btnOutline}>
+                  {homeHero.secondaryCta} →
                 </Link>
               </div>
             </Reveal>
           </div>
 
-          <Reveal immediate delay={motionStagger * 2} direction="right" className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+          <Reveal
+            immediate
+            delay={motionStagger * 2}
+            direction="right"
+            className="relative mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none"
+          >
             <div className="grid grid-cols-12 gap-1.5">
               <div className={cn(card, "col-span-12 p-0 sm:col-span-7 sm:row-span-2")}>
                 <CardImage
@@ -82,7 +90,7 @@ export function HeroSection() {
             <Reveal
               key={stat.label}
               immediate
-              delay={motionStagger * 3 + i * motionStagger}
+              delay={motionStagger * 4 + i * motionStagger}
               direction="up"
             >
               <div

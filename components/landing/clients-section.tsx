@@ -1,4 +1,5 @@
-import { type Client, clients } from "@/lib/landing/data";
+import { type Client, clients, clientsSection } from "@/lib/landing/data";
+import { overline } from "@/lib/landing/constants";
 import { cn } from "@/lib/utils";
 
 function ClientLogo({ client }: { client: Client }) {
@@ -25,8 +26,10 @@ export function ClientsSection() {
     <section
       id="clients"
       className="w-full border-y border-horizon-border/60 bg-horizon-cream py-8 md:py-10"
-      aria-label="Client logos"
+      aria-label="Clients"
     >
+      <p className={cn(overline, "mb-6 text-center")}>{clientsSection.label}</p>
+
       <div className="clients-marquee overflow-hidden">
         <ul className="clients-marquee__track list-none" aria-hidden>
           {track.map((client, index) => (
@@ -39,6 +42,10 @@ export function ClientsSection() {
           ))}
         </ul>
       </div>
+
+      <p className="mx-auto mt-6 max-w-2xl px-4 text-center text-sm text-horizon-muted md:hidden">
+        {clientsSection.fallbackText}
+      </p>
 
       <ul className="sr-only">
         {clients.map((client) => (

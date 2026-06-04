@@ -59,6 +59,8 @@ export type MainCategoryContent = {
   slug: string;
   label: string;
   tagline: string;
+  /** Homepage service card CTA, e.g. "Explore software development" */
+  exploreCta?: string;
   description: string;
   metaDescription: string;
   icon: LucideIcon;
