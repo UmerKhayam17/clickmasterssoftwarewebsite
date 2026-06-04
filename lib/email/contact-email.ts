@@ -84,7 +84,7 @@ function formatPlainText(data: ContactFormData): string {
     "Message:",
     data.message,
     "",
-    "— Reply to this email to respond directly to the client.",
+    "Reply to this email to respond directly to the client.",
   ].join("\n");
 }
 
@@ -179,7 +179,7 @@ async function sendViaSmtp(data: ContactFormData): Promise<void> {
     text: formatPlainText(data),
     html: formatHtml(data),
     headers: {
-      "X-Contact-Form": "nexus-website",
+      "X-Contact-Form": "Next Software Development Company-website",
     },
   });
 }

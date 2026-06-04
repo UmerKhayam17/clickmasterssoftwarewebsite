@@ -20,11 +20,11 @@ export const mainCategories: MainCategoryContent[] = [
     label: "Software Development",
     exploreCta: "Explore software development",
     tagline:
-      "Custom software that fits your business exactly — CRM systems, ERP platforms, SaaS products, HRM tools, POS software and enterprise applications built from the ground up for companies in Pakistan and beyond.",
+      "Custom software that fits your business exactly CRM systems, ERP platforms, SaaS products, HRM tools, POS software and enterprise applications built from the ground up for companies in Pakistan and beyond.",
     description:
       "We partner with teams to design and build custom software—from greenfield platforms to modernizing legacy systems. Our engineers embed with yours, ship in tight loops, and leave codebases your team can own for years.",
     metaDescription:
-      "Custom software, web, mobile, and API development. Nexus Software builds maintainable products with senior engineers and weekly delivery.",
+      "Custom software, web, mobile, and API development. Next Software Development Company Software builds maintainable products with senior engineers and weekly delivery.",
     heroImage: {
       src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
       alt: "Developers collaborating on software",
@@ -116,11 +116,11 @@ export const mainCategories: MainCategoryContent[] = [
     label: "Design & UI/UX",
     exploreCta: "Explore design services",
     tagline:
-      "Interfaces that convert and products that users love. We move from discovery and user research through wireframes to high-fidelity Figma designs — and stay involved throughout development to make sure every pixel ships as designed.",
+      "Interfaces that convert and products that users love. We move from discovery and user research through wireframes to high-fidelity Figma designs and stay involved throughout development to make sure every pixel ships as designed.",
     description:
       "Our design practice pairs research with craft. We help you understand users, define design languages, and ship interfaces that feel intentional at every breakpoint.",
     metaDescription:
-      "UX research, UI systems, prototyping, and design audits. Nexus Software creates calm, confident product experiences.",
+      "UX research, UI systems, prototyping, and design audits. Next Software Development Company Software creates calm, confident product experiences.",
     heroImage: {
       src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
       alt: "Design team reviewing interface work",
@@ -196,11 +196,11 @@ export const mainCategories: MainCategoryContent[] = [
     label: "Cloud & DevOps",
     exploreCta: "Explore cloud services",
     tagline:
-      "Your software is only as reliable as the infrastructure underneath it. We architect, deploy and manage cloud environments on AWS, Google Cloud and Azure — with full CI/CD automation, monitoring and zero-downtime deployments.",
+      "Your software is only as reliable as the infrastructure underneath it. We architect, deploy and manage cloud environments on AWS, Google Cloud and Azure with full CI/CD automation, monitoring and zero-downtime deployments.",
     description:
       "We design cloud architecture, automate deployments, and instrument systems so you can move fast with confidence. From first deploy to multi-region scale, we focus on reliability and developer experience.",
     metaDescription:
-      "Cloud architecture, CI/CD, Kubernetes, and observability. Nexus Software helps teams ship reliably on modern infrastructure.",
+      "Cloud architecture, CI/CD, Kubernetes, and observability. Next Software Development Company Software helps teams ship reliably on modern infrastructure.",
     heroImage: {
       src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
       alt: "Cloud infrastructure visualization",
@@ -280,7 +280,7 @@ export const mainCategories: MainCategoryContent[] = [
     description:
       "We build analytics pipelines, dashboards stakeholders trust, and security practices that scale with your product. From first metrics to compliance readiness, we help you grow with guardrails.",
     metaDescription:
-      "Analytics dashboards, data pipelines, security audits, and compliance. Nexus Software for data-driven, secure products.",
+      "Analytics dashboards, data pipelines, security audits, and compliance. Next Software Development Company Software for data-driven, secure products.",
     heroImage: {
       src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
       alt: "Analytics dashboard on a monitor",

@@ -1,4 +1,4 @@
-/** Horizon design tokens — cream #FFF9E1 · peach #FFE5D9 · sky #BDE0FE · navy #0D1B2A */
+/** Horizon design tokens cream #FFF9E1 · peach #FFE5D9 · sky #BDE0FE · navy #0D1B2A */
 
 /** Primary destination for site-wide CTAs */
 export const contactPath = "/contact";

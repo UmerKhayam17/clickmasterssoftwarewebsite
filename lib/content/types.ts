@@ -1,4 +1,4 @@
-/** Shared content types — all category pages read from data using these shapes */
+/** Shared content types all category pages read from data using these shapes */
 
 import type { LucideIcon } from "lucide-react";
 
@@ -20,7 +20,7 @@ export type ApproachStep = {
   description: string;
 };
 
-/** Sub-category — route: /{mainSlug}/{subSlug} (e.g. /software-development/custom-software-development) */
+/** Sub-category route: /{mainSlug}/{subSlug} (e.g. /software-development/custom-software-development) */
 export type SubCategoryContent = {
   slug: string;
   label: string;
@@ -36,7 +36,7 @@ export type SubCategoryContent = {
   highlights?: ContentBlock[];
 };
 
-/** Section headings — override defaults on the template */
+/** Section headings override defaults on the template */
 export type MainCategorySections = {
   offerings?: { title: string; subtitle?: string };
   highlights?: { title: string };
@@ -52,7 +52,7 @@ export type SubCategoryPageData = {
 };
 
 /**
- * Main category — one entry = one route at /{slug}
+ * Main category one entry = one route at /{slug}
  * Add entries to `mainCategories` in categories.data.ts (no new page files needed).
  */
 export type MainCategoryContent = {

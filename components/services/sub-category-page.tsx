@@ -25,7 +25,7 @@ type Props = {
 };
 
 /**
- * Reusable sub-category page — renders any /{mainSlug}/{subSlug} from categories.data.ts
+ * Reusable sub-category page renders any /{mainSlug}/{subSlug} from categories.data.ts
  */
 export function SubCategoryPage({ data }: Props) {
   const { main, sub } = data;
@@ -126,7 +126,7 @@ export function SubCategoryPage({ data }: Props) {
           <div className={cn(container, sectionPad)}>
             <Reveal>
               <h2 className="font-heading text-3xl font-normal text-horizon-navy md:text-4xl">
-                Why <span className="italic">{sub.label}</span> with Nexus
+                Why <span className="italic">{sub.label}</span> with Next Software Development Company
               </h2>
             </Reveal>
             <ul className="mt-10 grid gap-4 md:grid-cols-3">

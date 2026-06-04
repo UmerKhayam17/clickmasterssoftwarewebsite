@@ -31,7 +31,7 @@ const defaultSections = {
   approach: { title: "Our approach" },
   related: { title: "Explore more capabilities" },
   cta: {
-    title: "Ready to build with Nexus?",
+    title: "Ready to build with Next Software Development Company?",
     description: (label: string) =>
       `Tell us about your ${label.toLowerCase()} needs—we'll respond within one business day.`,
     buttonLabel: "Get in touch",
@@ -44,7 +44,7 @@ type Props = {
 };
 
 /**
- * Reusable main category page — renders any entry from lib/content/categories.data.ts
+ * Reusable main category page renders any entry from lib/content/categories.data.ts
  */
 export function MainCategoryPage({ category }: Props) {
   const siblings = getAllMainCategories().filter((c) => c.slug !== category.slug);
@@ -278,9 +278,9 @@ export function MainCategoryPage({ category }: Props) {
           <div className={cn(container, sectionPad, "text-center")}>
             <Reveal>
               <h2 className="font-heading text-3xl font-normal md:text-4xl">
-                {sections.cta.title.includes("Nexus") ? (
+                {sections.cta.title.includes("Next Software Development Company") ? (
                   <>
-                    Ready to build with <span className="italic">Nexus</span>?
+                    Ready to build with <span className="italic">Next Software Development Company</span>?
                   </>
                 ) : (
                   sections.cta.title

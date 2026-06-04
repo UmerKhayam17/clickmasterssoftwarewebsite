@@ -7,7 +7,7 @@ import type {
 
 const slugIndex = new Map(mainCategories.map((c) => [c.slug, c]));
 
-/** All main category slugs — used by generateStaticParams */
+/** All main category slugs used by generateStaticParams */
 export function getAllMainCategorySlugs(): string[] {
   return mainCategories.map((c) => c.slug);
 }
@@ -62,7 +62,7 @@ export function subCategoryPath(mainSlug: string, subSlug: string): string {
   return `/${mainSlug}/${subSlug}`;
 }
 
-/** Header services dropdown — derived from content (do not duplicate in nav by hand) */
+/** Header services dropdown derived from content (do not duplicate in nav by hand) */
 export function getServiceNavCategories() {
   return mainCategories.map((category) => ({
     label: category.label,

@@ -18,7 +18,7 @@ export const emptyContactForm: ContactFormState = {
   message: "",
 };
 
-export const CONTACT_DRAFT_STORAGE_KEY = "nexus-contact-draft";
+export const CONTACT_DRAFT_STORAGE_KEY = "Next Software Development Company-contact-draft";
 
 function paramValue(value: string | string[] | undefined): string {
   if (Array.isArray(value)) return value[0]?.trim() ?? "";
@@ -60,7 +60,7 @@ export function saveContactDraft(values: Pick<ContactFormState, "name" | "email"
   try {
     sessionStorage.setItem(CONTACT_DRAFT_STORAGE_KEY, JSON.stringify(values));
   } catch {
-    // Private mode / quota — ignore
+    // Private mode / quota ignore
   }
 }
 

@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const description =
     data.sub.metaDescription ??
-    `${data.sub.label} — ${data.main.label}. ${data.sub.description}`;
+    `${data.sub.label} ${data.main.label}. ${data.sub.description}`;
 
   return {
-    title: `${data.sub.label} | ${data.main.label} | Nexus Software`,
+    title: `${data.sub.label} | ${data.main.label} | Next Software Development Company Software`,
     description,
   };
 }

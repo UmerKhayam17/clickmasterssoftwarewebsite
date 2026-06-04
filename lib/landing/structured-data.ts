@@ -14,7 +14,7 @@ export function organizationJsonLd() {
       addressLocality: "Islamabad",
       addressCountry: "PK",
     },
-    description: siteBrand.name + " — software development company in Islamabad, Pakistan.",
+    description: siteBrand.name + " software development company in Islamabad, Pakistan.",
     areaServed: ["PK", "GB", "AE", "US", "CA"],
   };
 }

@@ -57,7 +57,7 @@
 }
 
 :root {
-  /* Horizon palette — cream · peach · sky · navy */
+  /* Horizon palette cream · peach · sky · navy */
   --horizon-cream: #fff9e1;
   --horizon-peach: #ffe5d9;
   --horizon-sky: #bde0fe;
@@ -132,7 +132,7 @@
   contain-intrinsic-size: auto 32rem;
 }
 
-/* Site-wide scroll reveal — visible until JS enables motion (fixes LAN / slow hydration) */
+/* Site-wide scroll reveal visible until JS enables motion (fixes LAN / slow hydration) */
 .motion-reveal {
   --motion-delay: 0ms;
   --motion-duration: 900ms;

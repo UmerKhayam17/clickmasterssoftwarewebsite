@@ -25,7 +25,7 @@ export const homeHero = {
   headlineBefore: "We build software at the",
   headlineEmphasis: "edge of results",
   subtext:
-    "Next Software Development is a full-service software company based in Islamabad, Pakistan. We design and build custom software, web applications, mobile apps, CRM systems and ERP platforms — for startups, growing businesses and enterprises across Pakistan and globally.",
+    "Next Software Development is a full-service software company based in Islamabad, Pakistan. We design and build custom software, web applications, mobile apps, CRM systems and ERP platforms for startups, growing businesses and enterprises across Pakistan and globally.",
   primaryCta: "Start Your Project",
   secondaryCta: "See Our Work",
   secondaryHref: "#projects",
@@ -119,7 +119,7 @@ export type ServiceCategory = {
 
 import { getServiceNavCategories } from "@/lib/content";
 
-/** Nav dropdown — auto-generated from lib/content/categories.data.ts */
+/** Nav dropdown auto-generated from lib/content/categories.data.ts */
 export const serviceCategories = getServiceNavCategories();
 
 export const processSteps = [
@@ -127,7 +127,7 @@ export const processSteps = [
     step: "1",
     title: "Discover",
     description:
-      "We start every engagement with deep listening. We learn your business, your users, your constraints and your goals — and produce a specification document that everyone agrees on before anything is built.",
+      "We start every engagement with deep listening. We learn your business, your users, your constraints and your goals and produce a specification document that everyone agrees on before anything is built.",
   },
   {
     step: "2",
@@ -145,7 +145,7 @@ export const processSteps = [
     step: "4",
     title: "Launch",
     description:
-      "We deploy, configure monitoring, run final QA across all environments and hand over full documentation. Then we stick around — with a 30-day warranty and optional ongoing support.",
+      "We deploy, configure monitoring, run final QA across all environments and hand over full documentation. Then we stick around with a 30-day warranty and optional ongoing support.",
   },
 ];
 
@@ -160,7 +160,7 @@ export const aboutSection = {
   teamLink: "/about#team",
   teamCta: "Meet our team",
   paragraphs: [
-    "Next Software Development is not a one-project agency. We are a dedicated software company based in Islamabad that builds long-term technology partnerships. Our clients come back to us — not just for one app or one website, but as their permanent technology team. We are fast, honest and obsessively focused on quality. We take full ownership of every project from the first line of code to the last deployment, and we are still here when you need us six months after launch.",
+    "Next Software Development is not a one-project agency. We are a dedicated software company based in Islamabad that builds long-term technology partnerships. Our clients come back to us not just for one app or one website, but as their permanent technology team. We are fast, honest and obsessively focused on quality. We take full ownership of every project from the first line of code to the last deployment, and we are still here when you need us six months after launch.",
   ],
   values: [
     {
@@ -199,7 +199,7 @@ export type TechStackTab = {
 };
 
 export const techStackIntro =
-  "Proven technologies chosen for performance, scalability and long-term maintainability — not trend-chasing.";
+  "Proven technologies chosen for performance, scalability and long-term maintainability not trend-chasing.";
 
 export const techStackTabs: TechStackTab[] = [
   {
@@ -274,7 +274,7 @@ export const projects = [
     title: "Lahore Sales CRM",
     category: "CRM Development · Pakistan",
     description:
-      "A fully custom CRM built for a Lahore-based sales team — replacing three disconnected tools with one unified platform.",
+      "A fully custom CRM built for a Lahore-based sales team replacing three disconnected tools with one unified platform.",
     image: {
       src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=75",
       alt: "CRM dashboard for sales team",
@@ -300,7 +300,7 @@ export const projects = [
     title: "Pakistan Marketplace",
     category: "E-Commerce · Pakistan",
     description:
-      "A multi-vendor marketplace with JazzCash and Easypaisa integration — handling over 500 daily transactions within three weeks of launch.",
+      "A multi-vendor marketplace with JazzCash and Easypaisa integration handling over 500 daily transactions within three weeks of launch.",
     image: {
       src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=75",
       alt: "E-commerce marketplace interface",
@@ -313,7 +313,7 @@ export const projects = [
     title: "Islamabad Manufacturing ERP",
     category: "ERP Development · Pakistan",
     description:
-      "A custom ERP replacing five spreadsheets for an Islamabad-based manufacturer — cutting monthly reporting time from two days to two hours.",
+      "A custom ERP replacing five spreadsheets for an Islamabad-based manufacturer cutting monthly reporting time from two days to two hours.",
     image: {
       src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=75",
       alt: "ERP analytics and reporting",
@@ -410,7 +410,7 @@ export const testimonials = [
   },
   {
     quote:
-      "As someone who has worked with software agencies in London, Dubai and Karachi — Next Software Development is right up there with the best. Their Islamabad team communicates brilliantly, ships on time and the code quality is excellent.",
+      "As someone who has worked with software agencies in London, Dubai and Karachi Next Software Development is right up there with the best. Their Islamabad team communicates brilliantly, ships on time and the code quality is excellent.",
     author: "Marcus Webb",
     role: "CTO, SaaS Startup · London, UK",
     image: {
@@ -450,7 +450,7 @@ export const blogPosts: BlogPost[] = [
     slug: "choose-software-development-company-pakistan",
     title: "How to Choose the Right Software Development Company in Pakistan",
     excerpt:
-      "There are hundreds of agencies offering software development services across Pakistan. Here is the honest framework we recommend for evaluating any software company — including us.",
+      "There are hundreds of agencies offering software development services across Pakistan. Here is the honest framework we recommend for evaluating any software company including us.",
     date: "May 12, 2026",
     readTime: "8 min",
     category: "Software Development",
@@ -463,7 +463,7 @@ export const blogPosts: BlogPost[] = [
     body: [
       "Choosing a software development company in Pakistan is not about picking the lowest quote or the flashiest portfolio. It is about finding a partner who will still answer the phone six months after launch.",
       "Start with delivery proof: case studies with measurable outcomes, references you can call, and code you can inspect if you have a technical advisor. Ask how they handle scope changes, who owns the IP, and what happens when timelines slip.",
-      "Look for a team that writes specifications before coding, demos working software every two weeks, and documents handoff. A good software company in Islamabad should overlap with your timezone if you are in the UK or UAE — and communicate in plain language.",
+      "Look for a team that writes specifications before coding, demos working software every two weeks, and documents handoff. A good software company in Islamabad should overlap with your timezone if you are in the UK or UAE and communicate in plain language.",
       "Finally, run a small paid discovery phase before committing to a six-figure build. The best firms will encourage that. It protects both sides and surfaces fit early.",
     ],
   },
@@ -482,7 +482,7 @@ export const blogPosts: BlogPost[] = [
       height: 500,
     },
     body: [
-      "Discovery is not a sales exercise. It is a short, structured phase where we map users, workflows, integrations, risks and success metrics — then agree on a fixed scope and price before build.",
+      "Discovery is not a sales exercise. It is a short, structured phase where we map users, workflows, integrations, risks and success metrics then agree on a fixed scope and price before build.",
       "A proper discovery deliverable includes user stories, a technical architecture sketch, milestone plan, and explicit out-of-scope list. Stakeholders sign off so there is one shared truth.",
       "Skipping discovery feels faster until rework piles up: wrong database choices, missing compliance requirements, or features nobody actually uses. That is when budgets blow past PKR estimates and trust erodes.",
       "Whether you work with Next Software Development or another firm, invest in discovery. It is the cheapest insurance on any custom software project.",
@@ -503,59 +503,59 @@ export const faqIntro =
 export const faqs: FaqItem[] = [
   {
     column: "left",
-    tag: "Pricing",
-    question: "How much does custom software development cost in Pakistan?",
+    tag: "Overview",
+    question: "What does a software development company do?",
     answer:
-      "Every project is different, so we price after a free discovery call — not before. That said, a web application or mobile app typically starts from PKR 300,000. A full CRM or ERP system ranges from PKR 800,000 to PKR 3,000,000 depending on complexity. We always provide a fixed price before work begins.",
+      "A software development company designs, builds, tests, and maintains custom software products tailored to your specific business needs. This includes web applications, mobile apps, enterprise systems, SaaS platforms, APIs, and more. Unlike buying off-the-shelf software, we build exactly what your business requires from the ground up.",
+  },
+  {
+    column: "left",
+    tag: "Pricing",
+    question: "How much does it cost to hire a software development company?",
+    answer:
+      "Software development costs vary widely based on project scope, complexity, and the team you hire. As a Pakistan-based software development company, we offer highly competitive rates compared to US or UK firms — typically 40–60% lower for the same quality of work. We provide a detailed, transparent quote after a free discovery call. Projects range from PKR 150,000 for a simple MVP to PKR 3,500,000+ for enterprise platforms.",
   },
   {
     column: "left",
     tag: "Timeline",
-    question: "How long does a software project take?",
+    question: "How long does it take to build custom software?",
     answer:
-      "A simple web app or MVP takes 4 to 8 weeks. A mobile app takes 8 to 14 weeks. A CRM, ERP or large platform takes 3 to 6 months. We give you a committed timeline in writing before any work starts.",
+      "Timelines depend on scope. A simple web app or MVP can be built in 6-10 weeks. A mid-complexity mobile application takes 3-5 months. A full enterprise software platform can take 6-12 months. We always provide a detailed timeline during the planning phase and stick to it — our on-time delivery rate is 94%.",
   },
   {
     column: "left",
     tag: "Global",
-    question: "Do you build software for clients outside Pakistan?",
+    question: "Do you work with clients outside Pakistan?",
     answer:
-      "Yes. We regularly work with clients in the UK, UAE, USA, Canada and Europe. Our Islamabad team overlaps naturally with UK and UAE business hours and we accept payment in PKR, USD, GBP and AED.",
-  },
-  {
-    column: "left",
-    tag: "Getting started",
-    question: "What if I just have an idea and no technical background?",
-    answer:
-      "That is exactly the kind of client we work best with. We handle everything — translating your idea into a specification, choosing the right technology and guiding you through every decision. You do not need to be technical at all.",
-  },
-  {
-    column: "right",
-    tag: "Legal",
-    question: "Do you sign NDAs before project discussions?",
-    answer:
-      "Yes, always. We sign a Non-Disclosure Agreement before any detailed project conversation. Your idea, your data and your code are completely confidential. Full intellectual property rights transfer to you on project completion.",
+      "Yes — the majority of our clients are based internationally, including the USA, UK, UAE, Canada, and Australia. We are a remote-first software development company with communication processes and timezone flexibility designed for international collaboration. We use Slack, Zoom, Jira, and Confluence to keep every client fully in the loop regardless of location.",
   },
   {
     column: "right",
     tag: "Process",
-    question: "How do you communicate during a project?",
+    question: "What is the difference between a software house and a software development company?",
     answer:
-      "You get a dedicated project manager, a shared project board (Jira or Notion), weekly written progress updates and access to your builds for review every two weeks. You are never left in the dark.",
+      "The terms are often used interchangeably. A software house typically refers to a company that builds software products as a service for other businesses. A software development company may also build its own products. We focus entirely on building custom software for our clients. We are both a software house and a software development company in the truest sense.",
   },
   {
     column: "right",
-    tag: "Support",
-    question: "Do you provide support after launch?",
+    tag: "Getting started",
+    question: "Can I hire dedicated developers from your company?",
     answer:
-      "Every project includes a 30-day bug-fix warranty at no cost. After that, we offer monthly maintenance packages covering security updates, performance monitoring and new feature development.",
+      "Absolutely. You can hire one developer or an entire team on a dedicated basis, working exclusively on your project during business hours. Dedicated developers integrate with your existing team, follow your processes, and report directly to you. It is the most cost-effective way to scale your development capacity quickly.",
   },
   {
     column: "right",
-    tag: "Why us",
-    question: "What makes you different from other software companies in Pakistan?",
+    tag: "Quality",
+    question: "How do you ensure the quality of your software?",
     answer:
-      "Three things: we write clean, documented, handover-ready code — you are never locked in. We communicate in plain English with no technical jargon. And we have never missed a committed launch date.",
+      "Quality is built into every stage of our process — not added at the end. We conduct code reviews, write unit and integration tests, perform manual QA testing, run automated regression testing, and carry out security audits before every release. Our QA team works in parallel with development to catch issues early, which keeps costs low and launch timelines on schedule.",
+  },
+  {
+    column: "right",
+    tag: "Legal",
+    question: "Is my project idea safe with you? Do you sign NDAs?",
+    answer:
+      "Yes — absolutely. We sign a mutual Non-Disclosure Agreement (NDA) before any project discussion begins. Your idea, your business data, and all project details are fully confidential. Our team follows strict internal data security policies and we are happy to involve your legal team in reviewing our standard NDA.",
   },
 ];
 
@@ -564,7 +564,7 @@ export const homeContact = {
   titleBefore: "Let's build your",
   titleEmphasis: "next big thing",
   subtext:
-    "Tell us about your project. We will get back to you within 24 hours with a clear path forward — no obligation, no sales pressure.",
+    "Tell us about your project. We will get back to you within 24 hours with a clear path forward: no obligation, no sales pressure.",
   emailPlaceholder: "Your email address",
   cta: "Get Started",
   reassurance: "Free consultation · No commitment · Based in Islamabad, Pakistan",
@@ -573,7 +573,7 @@ export const homeContact = {
 export const footerBrand = {
   description:
     "A software development company in Islamabad, Pakistan. Building software that lasts.",
-  copyright: "© 2025 Next Software Development. All rights reserved.",
+  copyright: "© 2026 Next Software Development Company. All rights reserved.",
 } as const;
 
 export const footerColumns = [
