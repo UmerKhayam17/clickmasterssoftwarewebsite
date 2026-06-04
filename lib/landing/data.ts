@@ -32,7 +32,6 @@ export const homeHero = {
 } as const;
 
 export const clientsSection = {
-  label: "Trusted by businesses across Pakistan, the United States, the United Kingdom, the United Arab Emirates, Canada, and Australia",
   fallbackText:
     "Worked with companies in retail, healthcare, logistics, finance, and education.",
 } as const;

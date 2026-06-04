@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import SplitText from "@/components/ui/SplitText";
+import { SectionHeading } from "@/components/landing/section-heading";
+import { container, sectionPad } from "@/lib/landing/constants";
 
 type Client = {
   name: string;
@@ -216,25 +217,17 @@ export function IndustriesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section ref={ref} className="relative w-full bg-[#f5fbfb] py-16">
-      <div className="mx-auto max-w-[1600px] px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="h-[2px] w-8 rounded-full bg-primary" />
-            <div className="inline-flex items-center gap-1.5 mt-6">
-              <SplitText
-                text="Trusted By Industry Leaders"
-                className="text-2xl md:text-3xl font-bold uppercase tracking-[0.25em] text-primary"
-              />
-            </div>
-            <span className="h-[2px] w-8 rounded-full bg-primary" />
+    <section ref={ref} className="w-full bg-[#f5fbfb]">
+      <div className={`${container} ${sectionPad}`}>
+        <div className="mb-12">
+            <SectionHeading
+              overlineText="Industries"
+              title="Industries We Serve"
+              description="Join 3,500+ businesses that trust ClickMasters to deliver exceptional software solutions"
+              align="left"
+              className="mb-10 md:mb-12"
+            />
           </div>
-
-          <p className="text-gray-800 max-w-2xl mx-auto text-base md:text-lg">
-            Join 3,500+ businesses that trust ClickMasters to deliver exceptional software solutions
-          </p>
-        </div>
-
         <div className="relative rounded-xl overflow-hidden border border-white/60 shadow-lg">
           {trustedClients.map((c, i) => (
             <div
