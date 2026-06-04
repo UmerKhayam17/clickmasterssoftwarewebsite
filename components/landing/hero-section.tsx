@@ -1,9 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { CardImage } from "@/components/landing/card-image";
 import { Reveal } from "@/components/landing/reveal";
 import { btnOutline, btnPrimary, card, contactPath, container, overline, sectionPad } from "@/lib/landing/constants";
-import { heroImages, homeHero, stats } from "@/lib/landing/data";
+import { heroImages, homeHero, ratingBadges, stats } from "@/lib/landing/data";
 import { motionStagger } from "@/lib/landing/motion";
 import { cn } from "@/lib/utils";
 
@@ -36,13 +37,15 @@ export function HeroSection() {
             </Reveal>
 
             <Reveal immediate delay={motionStagger * 3}>
-              <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center">
-                <Link href={contactPath} className={btnPrimary}>
-                  {homeHero.primaryCta}
-                </Link>
-                <Link href={homeHero.secondaryHref} className={btnOutline}>
-                  {homeHero.secondaryCta} →
-                </Link>
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                  <Link href={contactPath} className={btnPrimary}>
+                    {homeHero.primaryCta}
+                  </Link>
+                  <Link href={homeHero.secondaryHref} className={btnOutline}>
+                    {homeHero.secondaryCta} →
+                  </Link>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -82,31 +85,47 @@ export function HeroSection() {
                 />
               </div>
             </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
+              {ratingBadges.map((badge, index) => (
+                <div
+                  key={badge.slug}
+                  className={
+                    "flex items-center justify-center rounded-3xl border p-3 shadow-sm " +
+                    (index < 3
+                      ? "border-transparent bg-horizon-navy text-white"
+                      : "border-horizon-border/20 bg-white/90")
+                  }
+                >
+                  <Image
+                    src={badge.logo}
+                    alt={badge.name}
+                    width={160}
+                    height={48}
+                    className="h-10 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <dl className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-4">
+              {stats.map((stat, i) => (
+                <Reveal
+                  key={stat.label}
+                  immediate
+                  delay={i * motionStagger}
+                  direction="up"
+                  className={cn(i > 0 && "sm:border-l sm:border-horizon-navy/10 sm:pl-4")}
+                >
+                  <dt className="font-heading text-3xl font-normal text-horizon-navy md:text-4xl">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-2 text-sm text-horizon-muted">{stat.label}</dd>
+                </Reveal>
+              ))}
+            </dl>
           </Reveal>
         </div>
-
-        <dl className="mt-10 grid grid-cols-2 gap-4 border-t border-horizon-navy/10 pt-6 sm:grid-cols-4">
-          {stats.map((stat, i) => (
-            <Reveal
-              key={stat.label}
-              immediate
-              delay={motionStagger * 4 + i * motionStagger}
-              direction="up"
-            >
-              <div
-                className={cn(
-                  "text-left",
-                  i > 0 && "sm:border-l sm:border-horizon-navy/10 sm:pl-4"
-                )}
-              >
-                <dt className="font-heading text-3xl font-normal text-horizon-navy md:text-4xl">
-                  {stat.value}
-                </dt>
-                <dd className="mt-2 text-sm text-horizon-muted">{stat.label}</dd>
-              </div>
-            </Reveal>
-          ))}
-        </dl>
       </div>
     </section>
   );

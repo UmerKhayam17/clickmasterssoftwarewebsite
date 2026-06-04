@@ -59,13 +59,13 @@ export default function Home() {
       <HeroSection />
       <main className="flex w-full flex-1 flex-col">
         <TrustedPartnersSection />
-        <IndustriesSection />
         <DeferredSection>
           <AboutSection />
         </DeferredSection>
         <DeferredSection>
           <ServicesSection />
         </DeferredSection>
+        <IndustriesSection />
         <DeferredSection>
           <TechStackSection />
         </DeferredSection>

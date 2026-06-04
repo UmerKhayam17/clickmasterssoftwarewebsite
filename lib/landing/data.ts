@@ -31,10 +31,24 @@ export const homeHero = {
   secondaryHref: "#projects",
 } as const;
 
-export const trustedPartnersSection = {
+export const trustedPartnersSection: { label: string; fallbackText: string } = {
+  label: "Trusted by industry leaders",
   fallbackText:
     "Trusted partners including Google, Microsoft, Amazon, Apple, Meta, Netflix, and more.",
-} as const;
+};
+
+export type RatingBadge = {
+  slug: string;
+  name: string;
+  logo: string;
+};
+
+export const ratingBadges: RatingBadge[] = [
+  { slug: "facebook", name: "Facebook", logo: "/ratings/facebook-rating.webp" },
+  { slug: "clutch", name: "Clutch", logo: "/ratings/clutch-rating.webp" },
+  { slug: "trustpilot", name: "Trustpilot", logo: "/ratings/trustpilot.webp" },
+  { slug: "google", name: "Google", logo: "/ratings/google-rating.webp" },
+];
 
 export type ContactSelectOption = {
   value: string;
