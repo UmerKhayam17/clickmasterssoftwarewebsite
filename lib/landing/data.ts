@@ -285,14 +285,12 @@ export const techStackLogos = [
   { id: "dotnet", name: ".NET", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" },
   { id: "dotnetframework", name: ".NET Framework", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" },
   { id: "csharp", name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
-  { id: "fsharp", name: "F#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fsharp/fsharp-original.svg" },
   { id: "java", name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
   { id: "kotlin", name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" },
   { id: "scala", name: "Scala", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" },
   { id: "python", name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { id: "nodejs", name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
   { id: "deno", name: "Deno", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/denojs/denojs-original.svg" },
-  { id: "bun", name: "Bun", icon: "https://bun.sh/icon.png" },
   { id: "php", name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
   { id: "go", name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" },
   { id: "ruby", name: "Ruby", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" },
@@ -309,10 +307,8 @@ export const techStackLogos = [
   { id: "dart", name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
   { id: "crystal", name: "Crystal", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/crystal/crystal-original.svg" },
   { id: "nim", name: "Nim", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nim/nim-original.svg" },
-  { id: "vlang", name: "V", icon: "https://vlang.io/img/v-logo.svg" },
-  { id: "zig", name: "Zig", icon: "https://ziglang.org/logo.svg" },
+
   { id: "ocaml", name: "OCaml", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ocaml/ocaml-original.svg" },
-  { id: "pascal", name: "Pascal", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pascal/pascal-original.svg" },
   { id: "cobol", name: "COBOL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cobol/cobol-original.svg" },
   { id: "fortran", name: "Fortran", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fortran/fortran-original.svg" },
   { id: "html5", name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -320,25 +316,18 @@ export const techStackLogos = [
   { id: "javascript", name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
   { id: "typescript", name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
   { id: "react", name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { id: "reactquery", name: "React Query", icon: "https://react-query.tanstack.com/_next/static/images/logo-8b1eb159dc1b7787f96196cfbaa9b449.svg" },
   { id: "redux", name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
   { id: "zustand", name: "Zustand", icon: "https://zustand-demo.pmnd.rs/favicon.ico" },
   { id: "nextjs", name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { id: "remix", name: "Remix", icon: "https://remix.run/favicon.ico" },
   { id: "gatsby", name: "Gatsby", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gatsby/gatsby-original.svg" },
   { id: "vuejs", name: "Vue.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
-  { id: "nuxtjs", name: "Nuxt.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg" },
   { id: "angular", name: "Angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
   { id: "svelte", name: "Svelte", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" },
-  { id: "sveltekit", name: "SvelteKit", icon: "https://kit.svelte.dev/images/favicon.png" },
   { id: "tailwindcss", name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
   { id: "bootstrap", name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
   { id: "sass", name: "Sass", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" },
   { id: "less", name: "Less", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/less/less-plain-wordmark.svg" },
   { id: "postcss", name: "PostCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postcss/postcss-original.svg" },
-  { id: "materialui", name: "Material-UI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
-  { id: "antdesign", name: "Ant Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/antdesign/antdesign-original.svg" },
-  { id: "chakraui", name: "Chakra UI", icon: "https://chakra-ui.com/favicon.png" },
   { id: "docker", name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
   { id: "kubernetes", name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
   { id: "jenkins", name: "Jenkins", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
@@ -356,7 +345,6 @@ export const techStackLogos = [
   { id: "firebase", name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
   { id: "tensorflow", name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
   { id: "pytorch", name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { id: "langchain", name: "LangChain", icon: "https://langchain.com/favicon.ico" },
   { id: "openai", name: "OpenAI", icon: "https://openai.com/favicon.ico" },
 ];
 
@@ -553,7 +541,7 @@ export const teamMembers = [
 export const testimonials = [
   {
     quote:
-      "We came to Next Software Development with a rough idea for a CRM and left with a product our entire sales team uses every single day. They were honest about what was possible, fast in delivery and thorough in testing. Exactly the software company we needed.",
+      "We came to Software Development Company with a rough idea for a CRM and left with a product our entire sales team uses every single day. They were honest about what was possible, fast in delivery and thorough in testing. Exactly the software company we needed.",
     author: "Saqib Shah",
     role: "CEO, Retail Group · Lahore, Pakistan",
     image: {
@@ -565,7 +553,7 @@ export const testimonials = [
   },
   {
     quote:
-      "As someone who has worked with software agencies in London, Dubai and Karachi Next Software Development is right up there with the best. Their Islamabad team communicates brilliantly, ships on time and the code quality is excellent.",
+      "As someone who has worked with software agencies in London, Dubai and Karachi Software Development Company is right up there with the best. Their Islamabad team communicates brilliantly, ships on time and the code quality is excellent.",
     author: "Marcus Webb",
     role: "CTO, SaaS Startup · London, UK",
     image: {
@@ -577,7 +565,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Our e-commerce platform was a mess before Next Software Development rebuilt it. Within six weeks we had a fast, clean store with proper JazzCash integration. Our conversion rate doubled. I refer them to every business owner I know in Pakistan.",
+      "Our e-commerce platform was a mess before Software Development Company rebuilt it. Within six weeks we had a fast, clean store with proper JazzCash integration. Our conversion rate doubled. I refer them to every business owner I know in Pakistan.",
     author: "Zara Khan",
     role: "Founder, Fashion Brand · Karachi, Pakistan",
     image: {
@@ -640,7 +628,7 @@ export const blogPosts: BlogPost[] = [
       "Discovery is not a sales exercise. It is a short, structured phase where we map users, workflows, integrations, risks and success metrics then agree on a fixed scope and price before build.",
       "A proper discovery deliverable includes user stories, a technical architecture sketch, milestone plan, and explicit out-of-scope list. Stakeholders sign off so there is one shared truth.",
       "Skipping discovery feels faster until rework piles up: wrong database choices, missing compliance requirements, or features nobody actually uses. That is when budgets blow past PKR estimates and trust erodes.",
-      "Whether you work with Next Software Development or another firm, invest in discovery. It is the cheapest insurance on any custom software project.",
+      "Whether you work with Software Development Company or another firm, invest in discovery. It is the cheapest insurance on any custom software project.",
     ],
   },
 ];

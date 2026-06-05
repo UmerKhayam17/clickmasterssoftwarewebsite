@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent as ReactMouseEvent } from "react";
 import { SectionHeading } from "@/components/landing/section-heading";
@@ -14,6 +15,8 @@ const GRAVITY = 0.45;
 const RESTITUTION = 0.72;
 const FRICTION = 0.985;
 const DAMPING = 0.999;
+
+const getNow = () => performance.now();
 
 type TechLogo = typeof techStackLogos[number];
 
@@ -175,7 +178,7 @@ export function TechStackSection() {
       b.y = pos.y - dragRef.current.offsetY;
       b.vx = 0;
       b.vy = 0;
-      const now = performance.now();
+      const now = getNow();
       dragRef.current.history.push({ x: pos.x, y: pos.y, t: now });
       dragRef.current.history = dragRef.current.history.filter((h) => now - h.t < 80);
     };
@@ -217,7 +220,7 @@ export function TechStackSection() {
       id,
       offsetX: pos.x - b.x,
       offsetY: pos.y - b.y,
-      history: [{ x: pos.x, y: pos.y, t: performance.now() }],
+      history: [{ x: pos.x, y: pos.y, t: getNow() }],
     };
     setDragId(id);
   };
@@ -295,11 +298,14 @@ export function TechStackSection() {
                 }}
               >
                 <div className="flex items-center justify-center rounded-full" style={{ width: iconSize, height: iconSize }}>
-                  <img
+                  <Image
                     src={logo.icon}
                     alt={logo.name}
+                    width={iconSize}
+                    height={iconSize}
                     className="max-w-full max-h-full"
                     style={{ filter: active ? 'none' : 'brightness(0.95)' }}
+                    unoptimized
                   />
                 </div>
                 <span
