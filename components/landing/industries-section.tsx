@@ -228,32 +228,33 @@ export function IndustriesSection() {
               className="mb-10 md:mb-12"
             />
           </div>
-        <div className="relative rounded-xl overflow-hidden border border-white/60 shadow-lg">
-          {trustedClients.map((c, i) => (
-            <div
-              key={c.name}
-              className="absolute inset-0 transition-opacity duration-700 ease-out"
-              style={{
-                opacity: (activeIndex === null && i === 0) || activeIndex === i ? 1 : 0,
-              }}
-            >
-              <Image src={c.image} alt={c.name} fill className="object-cover" priority={i === 0} />
-            </div>
-          ))}
+      </div>
 
-          <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[1px]">
-            {trustedClients.map((client, idx) => (
-              <ClientCard
-                key={client.name}
-                client={client}
-                index={idx}
-                visible={visible}
-                isActive={activeIndex === idx}
-                onHover={() => setActiveIndex(idx)}
-                onLeave={() => setActiveIndex((curr) => (curr === idx ? null : curr))}
-              />
-            ))}
+      <div className="relative w-full overflow-hidden border border-white/60 shadow-lg">
+        {trustedClients.map((c, i) => (
+          <div
+            key={c.name}
+            className="absolute inset-0 transition-opacity duration-700 ease-out"
+            style={{
+              opacity: (activeIndex === null && i === 0) || activeIndex === i ? 1 : 0,
+            }}
+          >
+            <Image src={c.image} alt={c.name} fill className="object-cover" priority={i === 0} />
           </div>
+        ))}
+
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[1px]">
+          {trustedClients.map((client, idx) => (
+            <ClientCard
+              key={client.name}
+              client={client}
+              index={idx}
+              visible={visible}
+              isActive={activeIndex === idx}
+              onHover={() => setActiveIndex(idx)}
+              onLeave={() => setActiveIndex((curr) => (curr === idx ? null : curr))}
+            />
+          ))}
         </div>
       </div>
     </section>
