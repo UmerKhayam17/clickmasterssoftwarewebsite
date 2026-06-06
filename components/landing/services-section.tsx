@@ -1,5 +1,6 @@
 'use client';
 
+// using native <img> for public/static images to avoid Next/Image loader issues
 import Link from 'next/link';
 import {
   ArrowUpRight,
@@ -32,6 +33,7 @@ const services = [
   {
     title: 'Software Development',
     description: 'Custom software solutions tailored to your business needs.',
+    image: '/services/Software development.png',
     Icon: ShieldCheck,
     AltIcon: Globe2,
     tag: 'Enterprise',
@@ -41,6 +43,7 @@ const services = [
   {
     title: 'Web Development',
     description: 'Modern web applications with responsive design and seamless user experience.',
+    image: '/services/Web Development.png',
     Icon: Globe2,
     AltIcon: Server,
     tag: 'Web3 Ready',
@@ -49,6 +52,7 @@ const services = [
   {
     title: 'Mobile Development',
     description: 'Build secure and scalable mobile applications for iOS and Android.',
+    image: '/services/Mobile Application Development.png',
     Icon: Smartphone,
     AltIcon: ShieldCheck,
     tag: 'Cross-Platform',
@@ -57,6 +61,7 @@ const services = [
   {
     title: 'Artificial Intelligence',
     description: 'AI-powered monitoring systems with predictive threat intelligence.',
+    image: '/services/Artificial Intelligence.png',
     Icon: BrainCircuit,
     AltIcon: Database,
     tag: 'Intelligence',
@@ -66,6 +71,7 @@ const services = [
   {
     title: 'UI/UX Systems',
     description: 'Elegant digital experiences focused on usability and conversion.',
+    image: '/services/UI-UX.png',
     Icon: Palette,
     AltIcon: Globe2,
     tag: 'Design',
@@ -74,6 +80,7 @@ const services = [
   {
     title: 'Cloud & DevOps',
     description: 'Secure cloud-native infrastructure with scalable DevOps workflows.',
+    image: '/services/CloudOPs and Devops.png',
     Icon: Database,
     AltIcon: Server,
     tag: 'DevSecOps',
@@ -83,6 +90,7 @@ const services = [
   {
     title: 'Machine Learning',
     description: 'Scalable infrastructure architecture with maximum uptime and reliability.',
+    image: '/services/Machine Learning.png',
     Icon: Server,
     AltIcon: BrainCircuit,
     tag: 'Reliability',
@@ -91,6 +99,7 @@ const services = [
   {
     title: 'Data Services',
     description: 'Data engineering, warehousing, and analytics solutions.',
+    image: '/services/Data Services.png',
     Icon: Database,
     AltIcon: Palette,
     tag: 'Platform',
@@ -99,6 +108,7 @@ const services = [
   {
     title: 'Testing & QA',
     description: 'Scalable infrastructure architecture with maximum uptime and reliability.',
+    image: '/services/Testing-and-QA.png',
     Icon: Database,
     AltIcon: Palette,
     tag: 'Platform',
@@ -115,7 +125,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[number]; i
       ? 'xl:row-span-2'
       : '';
 
-  const route = serviceRoutes[service.title];
+  const route = serviceRoutes[service.title as keyof typeof serviceRoutes];
 
   return (
     <div
@@ -159,7 +169,13 @@ function ServiceCard({ service, index }: { service: (typeof services)[number]; i
                 className="absolute w-40 h-40 rounded-full blur-[60px] opacity-30 group-hover:opacity-50 transition-all duration-700"
                 style={{ background: accent }}
               />
-              <div className="relative w-56 h-56 rounded-[32px] border border-white/40 bg-slate-100/70 shadow-inner" />
+              {service.image ? (
+                <div className="relative w-56 h-56 overflow-hidden rounded-[32px]">
+                  <img src={service.image} alt={service.title} className="object-cover w-full h-full" />
+                </div>
+              ) : (
+                <div className="relative w-56 h-56 rounded-[32px] bg-slate-100/70" />
+              )}
             </div>
 
             <div className='mb-6'>
