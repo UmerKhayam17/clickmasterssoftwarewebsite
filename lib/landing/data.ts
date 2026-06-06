@@ -34,7 +34,7 @@ export const homeHero = {
 export const trustedPartnersSection: { label: string; fallbackText: string } = {
   label: "",
   fallbackText:
-    "Trusted partners including Google, Microsoft, Amazon, Apple, Meta, Netflix, and more.",
+    "",
 };
 
 export type RatingBadge = {
