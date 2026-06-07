@@ -9,7 +9,7 @@ export type SolutionCategory =
   | "Operations";
 
 /**
- * Product solution — one entry = /solutions/{slug}
+ * Product solution one entry = /solutions/{slug}
  * Add rows to `solutions` in solutions.data.ts (no new route files needed).
  */
 export type SolutionContent = {

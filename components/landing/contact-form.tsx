@@ -134,7 +134,7 @@ export function ContactForm({
           className={cn(inputField, "flex-1")}
         />
         <button type="submit" className={cn(btnPrimary, "shrink-0 px-8")}>
-          Get started
+          Get Started
         </button>
       </form>
     );

@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { AboutPage } from "@/components/pages/about-page";
 
 export const metadata: Metadata = {
-  title: "About | Nexus Software",
+  title: "About | Software Development Company Software",
   description:
-    "Nexus is a boutique software studio pairing thoughtful design with rigorous engineering.",
+    "Software Development Company is a boutique software studio pairing thoughtful design with rigorous engineering.",
 };
 
 export default function AboutRoute() {

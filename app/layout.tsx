@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 
 import { MotionInit } from "@/components/motion-init";
+import { siteBrand, siteMetadata } from "@/lib/landing/brand";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -22,9 +23,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Software — Software at the edge of light",
-  description:
-    "A boutique software studio building products at the horizon of design and engineering.",
+  title: {
+    default: siteMetadata.title,
+    template: `%s | ${siteBrand.name}`,
+  },
+  description: siteMetadata.description,
+  keywords: [...siteMetadata.keywords],
 };
 
 export default function RootLayout({
