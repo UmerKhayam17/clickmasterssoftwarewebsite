@@ -35,16 +35,17 @@ interface Bubble {
 
 function createBubbles(w: number, h: number): Bubble[] {
   const count = techStackLogos.length;
-  const cols = Math.ceil(Math.sqrt(count * (w / h)));
+  const sizeScale = Math.min(1, Math.max(0.6, w / 1200));
+  const cols = Math.max(3, Math.ceil(Math.sqrt(count * (w / h))));
   const rows = Math.ceil(count / cols);
   return techStackLogos.map((logo, i) => {
-    const r = 38 + Math.random() * 20;
+    const r = Math.max(18, (32 + Math.random() * 18) * sizeScale);
     const col = i % cols;
     const row = Math.floor(i / cols);
     const cellW = w / cols;
     const cellH = (h * 0.72) / rows;
     const startY = cellH * row + r + 8;
-    const dropOffset = 80 + Math.random() * 80;
+    const dropOffset = Math.max(50, 80 * sizeScale + Math.random() * 40);
     return {
       id: i,
       logo,
@@ -145,11 +146,18 @@ export function TechStackSection() {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    const w = el.clientWidth;
-    const h = el.clientHeight;
-    const nextBubbles = createBubbles(w, h);
-    bubblesRef.current = nextBubbles;
-    setBubbles(nextBubbles);
+
+    const initialize = () => {
+      const { width, height } = el.getBoundingClientRect();
+      if (width <= 0 || height <= 0) return;
+      const nextBubbles = createBubbles(width, height);
+      bubblesRef.current = nextBubbles;
+      setBubbles(nextBubbles);
+    };
+
+    initialize();
+    const observer = new ResizeObserver(() => initialize());
+    observer.observe(el);
 
     const loop = () => {
       const { width, height } = el.getBoundingClientRect();
@@ -165,7 +173,10 @@ export function TechStackSection() {
     };
 
     rafRef.current = requestAnimationFrame(loop);
-    return () => cancelAnimationFrame(rafRef.current);
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      observer.disconnect();
+    };
   }, []);
 
   useEffect(() => {
@@ -244,8 +255,8 @@ export function TechStackSection() {
 
         <div
           ref={containerRef}
-          className="relative w-full select-none"
-          style={{ height: 640, cursor: dragId !== null ? 'grabbing' : 'default', overflow: 'visible' }}
+          className="relative w-full select-none h-[28rem] sm:h-[36rem] lg:h-[44rem]"
+          style={{ cursor: dragId !== null ? 'grabbing' : 'default', overflow: 'visible' }}
         >
         <div
           className="absolute inset-0 pointer-events-none"
